@@ -1,0 +1,24 @@
+/* Rigged Roster Core basic styles */
+.rr-nhl-scores { 
+  display: grid; 
+  gap: 8px; 
+  padding: 8px 0; 
+}
+.rr-nhl-game { 
+  display: grid; 
+  grid-template-columns: 1fr auto 1fr auto auto; 
+  gap: 8px; 
+  align-items: center; 
+  padding: 8px 12px; 
+  border: 1px solid #e2e8f0; 
+  border-radius: 6px; 
+  background: #fff; 
+}
+.rr-nhl-game .rr-team { font-weight: 600; }
+.rr-nhl-game .rr-score { font-variant-numeric: tabular-nums; }
+.rr-nhl-game .rr-status { color: #64748b; font-size: 12px; }
+.rr-nhl-scores.rr-error, .rr-nhl-scores.rr-empty { color: #b91c1c; }
+@media (prefers-color-scheme: dark) {
+  .rr-nhl-game { background: #0b1220; border-color: #243041; }
+  .rr-nhl-game .rr-status { color: #94a3b8; }
+}
